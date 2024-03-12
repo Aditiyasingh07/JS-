@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom01</title>
+</head>
+<body style="background-color: black;">
+    <!-- <div class="main">
+        <h1>Hello DOM(Document Object Model)</h1>
+        <p style="font-size: 2rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut eum expedita rem quam vero nobis obcaecati aliquam quae labore debitis.</p>
+    </div> -->
+    <div class="parent">
+        <div class="day" style="font-size: 2rem; color: antiquewhite;">Monday</div>
+        <div class="day" style=" color: antiquewhite; font-size: 2rem;">Tuesday</div>
+        <div class="day" style=" color: antiquewhite; font-size: 2rem;">Wednesday</div>
+        <div class="day" style="font-size: 2rem; color: antiquewhite;">Thursday</div>
+    </div>
+    <script>
+        const boss = document.querySelector('.parent')
+        console.log(boss);
+        console.log(boss.children[3].innerHTML); // Thursday
+
+        for (let i = 0; i < boss.children.length; i++) {
+            console.log(boss.children[i].innerHTML);
+        }
+    </script>
+</body>
+<!-- <script src="./dom01.js"></script> -->
+</html>

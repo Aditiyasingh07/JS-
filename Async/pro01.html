@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: darkgrey;">
+    <h1 style="font-size: 3rem;">Marvel SuperHeros 😊</h1>
+    <button style="font-size: 1.2rem;" id="stop">Stop</button>
+    <button id="start" style="font-size: 1.2rem;">Start</button>
+</body>
+<script>
+    // const newone = (a)=> {
+    //     console.log(a, Date.now());
+    // }
+    // const interval = setInterval(newone, 2000, "Hy");
+
+    // clearInterval(interval)
+    let interval
+    const StartPrinting = ()=>{
+        const newone = (a)=> {
+        console.log(a, Date.now());
+    }
+    interval = setInterval(newone, 2000, "Hy");
+    }
+
+    const StopPrinting = ()=>{
+        clearInterval(interval)
+    }
+
+    document.querySelector('#start').addEventListener('click', StartPrinting)
+    document.querySelector('#stop').addEventListener('click', StopPrinting)
+
+
+    // document.querySelector( "#start" ).addEventListener("click", function newone (a){
+    //     console.log(a, Date.now());
+    //     const interval = setInterval(newone, 2000, "Hy");
+    // })
+
+    // document.querySelector( "#stop" ).addEventListener("click", function newone(a){
+    //     console.log(a, Date.now(a));
+    //     const interval = setInterval(newone, 2000, "Hy");
+    //     clearInterval(interval);
+    // })
+
+
+    //Project 
+
+    // const rendomcolor = function() {
+    //     let hex = '0123456789ABCDEF'
+    //     let color = "#"
+    //     for (let i = 0; i < 6; i++) {
+    //         color += hex[Math.floor(Math.random() * 16)]
+    //     }
+    //     return color;
+    // }
+    // let colorChanger
+    // const startChangeColor = ()=>{
+    //     colorChanger = setInterval(Colorpec, 2000)
+        
+    //     function Colorpec (){
+    //         document.body.style.backgroundColor = rendomcolor()
+    //     }
+    //     // colorChanger = setInterval(()=>{
+    //     //     document.body.style.backgroundColor = rendomcolor()
+    //     // },2000)
+    // }
+
+    // const stopChangeColor = ()=>{
+    //     clearInterval(colorChanger)
+    //     console.log('Stopped Changing Colors');
+    // }
+
+    // document.querySelector('#stop').addEventListener('click', stopChangeColor)
+
+    // document.querySelector('#start').addEventListener('click', startChangeColor)
+    // console.log(rendomcolor());
+</script>
+</html>

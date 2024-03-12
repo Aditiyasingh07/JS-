@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom02</title>
+</head>
+<body style="background-color: rgb(62, 54, 54); color: whitesmoke;">
+    <ul style="font-size: 2rem;">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addli (langname) {
+        const ul = document.querySelector("ul")
+        const creli = document.createElement('li')
+        creli.innerHTML = `${langname}`
+        ul.appendChild(creli)
+    }
+    addli('python')
+    addli('Java')
+    addli('C++')
+
+    //with optimization code 
+    function addli(langname) {
+        const cretli = document.createElement( 'li' );cretli.appendChild(document.createTextNode(langname))
+        document.querySelector("ul").appendChild(cretli)
+    }
+    addli('rust')
+    addli('ruby')
+
+// Edit
+
+const editlang = document.querySelector('li:nth-child(4)');
+const newli = document.createElement('li')
+newli.textContent = ".Net"
+editlang.replaceWith(newli)
+
+// edit
+const edit = document.querySelector('li')
+edit.outerHTML = '<li>HTML</li>'
+
+//remove
+const remove = document.querySelector('li')
+remove.remove()
+
+</script>
+</html>

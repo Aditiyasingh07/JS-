@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Boi!</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout print only once at particular duration
+    const preh1 = (function(){
+        document.querySelector('h1').innerText ='Hello Boi!';
+    }, 5000)
+
+    const newh1 = function (){
+        document.querySelector('h1').innerText = 'Hello Man😎';
+    }
+    const newbtn = setTimeout(newh1, 3000);
+
+    document.querySelector('#stop').addEventListener('click', ()=> {
+        clearTimeout(newbtn)
+        console.log('Button Clicked');
+    })
+
+    //setInterval print repeatedly after a certain time interval
+    // setInterval(function(){
+    //     console.log(`Hello Boi! for setInterval`);
+    // }, 5000)
+</script>
+</html>

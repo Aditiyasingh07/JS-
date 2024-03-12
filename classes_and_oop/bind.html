@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div class="main" style="display: flex; height: 100vh; width: 100vw;
+    justify-content: center; align-items: center;">
+        <button>Click me!</button>
+    </div>
+</body>
+<script>
+    class hello {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:3000/"
+
+
+            //requirement
+
+            document.querySelector('button').addEventListener('click', this.hanleclick.bind(this ))
+        }
+
+        hanleclick(){
+            console.log(`Clicked!😎`);
+            console.log(`${this.server}`);
+        }
+    }
+
+    const helloworld = new hello();
+</script>
+</html>
